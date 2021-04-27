@@ -4,7 +4,7 @@ import com.wolken.wolkenapp.byImplementingRunnable.ThirteenTable1;
 import com.wolken.wolkenapp.byImplementingRunnable.ThirteenTable2;
 
 public class TableTester {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		System.out.println("Thread name: " + Thread.currentThread().getName());
 		System.out.println("Thread ID: " + Thread.currentThread().getId());
@@ -20,6 +20,7 @@ public class TableTester {
 
 		table1.start();
 		table2.start();
+		// table1.wait(1000);
 
 		thread1.start();
 		thread2.start();
